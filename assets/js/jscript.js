@@ -170,6 +170,7 @@ const seleccion = new Vue({
     el: '#seleccion',
     data: {
         colorTexto: 'tema-acierto',
+        activo: false,
         formDato: {
             nombre: '',
             correo: '',
@@ -190,12 +191,12 @@ const seleccion = new Vue({
                 titulo: 'Animacion grafica'
             },
             {
-                icon: 'icon-equalizer',
-                titulo: 'Gestionable'
+                icon: 'icon-drive',
+                titulo: 'Back-end'
             },
             {
                 icon: 'icon-loop2',
-                titulo: 'Renovar'
+                titulo: 'UX UI'
             },
             {
                 icon: 'icon-display',
@@ -207,7 +208,7 @@ const seleccion = new Vue({
             },
             {
                 icon: 'icon-pencil2',
-                titulo: 'Diseño grafico'
+                titulo: 'Ilustraciones'
             },
             {
                 icon: 'icon-film',
@@ -238,6 +239,11 @@ const seleccion = new Vue({
 
             return res;
         },
+        canSend(){
+            return validateEmail(this.formDato.correo) &&
+                    validarTexto(this.formDato.nombre) &&
+                    this.formDato.descripcion != ''
+        }
     },
     methods: {
         enviarDatos() {

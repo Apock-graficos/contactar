@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apock gráficos portafolio</title>
-    <meta name="author" content="Apock graficos">
+    <meta name="author" content="Yenerson Hernandez, Yelainer Hernandez">
+    <meta name="copyright" content="Apock graficos">
     <meta name="description" content="Diseñador y desarrollador web Front-end, Colombiano">
     <meta name="keywords" content="Desarrollador front-end, diseñador grafico, desarrollador de interfaz grafica con tecnologia web">
     <link rel="icon" href="assets/img/icon-apock-graficos.ico">
@@ -26,10 +27,10 @@
                     </div>
                     <div class="bloq">
                         <p class="bloq globo sombra-peq flecha-izq tema-pre">
-                            ¡Hoola. y bienvenido a Apock gráficos!
+                            ¡Hoola y bienvenido a Apock gráficos!
                         </p>
                         <p class="bloq globo sombra-peq tema-pre">
-                            Has un tour de todo lo que hacemos, así nos conocerás y tendrás la confianza de realizar tus proyecto con nosotros.
+                            Haz un tour por todo lo que hacemos, así nos conocerás y tendrás la confianza para realizar tus proyecto con nosotros.
                         </p>
                     </div>
                 </article>
@@ -66,7 +67,7 @@
                                 <div class="bloque rell-med tema-claro redon-med sombra-med">
                                     <h3 class="marg-aba-peq">¡Conocenos!</h3>
                                     <div class="bloque t-med">
-                                        <p>Hola! me llamo Yenerson Hernández. Desarrollador y diseñador Front-end.<br>He participado en múltiples proyectos de mi País el cual están satisfechos con mi trabajo</p>
+                                        <p>Hola! me llamo Yenerson Hernández. Desarrollador y diseñador Front-end.<br>He participado en múltiples proyectos de mi País. Dejando muchos clientes satisfechos con nuestro trabajo.</p>
                                         <p>Mis habilidades principales</p>
                                     </div>
                                 </div>
@@ -187,7 +188,7 @@
                 </div>
             </div>
         </div>
-        <section class="flexi lg-med fondo-fijo seccion-queso prioridad-nor">
+        <section class="flexi lg-med fondo-fijo seccion-queso prioridad-nor" id="descamos">
             <span class="bloq-cortina"></span>
             <div class="img-yenr pant-tb-nula">
                 <img src="assets/img/yenr-1.png" alt="">
@@ -204,12 +205,12 @@
                     </div>
                 </div>
                 <div class="tarj-creativa rell-peq fondo-claro sombra-med redon-red alin-centro">
-                    <div class="bloq-icono tam-gra gradiante-purpura">
-                        <i class="icon-user-plus t-h3"></i>
+                    <div class="bloq-icono tam-gra gradiante-verde tex-claro">
+                        <i class="icon-books t-h3"></i>
                     </div>
                     <div class="bloq-cuerpo marg-izq-med">
-                        <h5 class="marg-aba-min texto-purpura">Participación de tu proyecto</h5>
-                        <p class="t-med tex-mudo">Tendras espacio para dar ideas. mientras el proyecto esta en desarrollo</p>
+                        <h5 class="marg-aba-min texto-verde">Conocimiento constante</h5>
+                        <p class="t-med tex-mudo">Siempre estamos actualizandonos con los últimos cambios en la tecnología. para estar a la vanguardia</p>
                     </div>
                 </div>
                 <div class="tarj-creativa rell-peq fondo-claro sombra-med redon-red alin-centro">
@@ -218,7 +219,7 @@
                     </div>
                     <div class="bloq-cuerpo marg-izq-med">
                         <h5 class="marg-aba-min texto-naranja">Diseño originales</h5>
-                        <p class="t-med tex-mudo">Siempre analizamos el diseño del proyecto con paginas actuales para que tenga su propio diseño</p>
+                        <p class="t-med tex-mudo">Aparte que desarrollamos aplicaciones, tenemos creatividad para crear diseños diferentes en cada proyecto</p>
                     </div>
                 </div>
             </div>
@@ -277,8 +278,12 @@
                                     {{ contCaractDesc }}
                                 </div>
                             </div>
-                            <button type="button" class="boton gradiante-cielo" v-on:click="enviarDatos">
-                                <i class="icon-whatsapp i-izq"></i> Enviar whatsapp
+                            <button type="button" :class="['boton gradiante-cielo btn-whapp', { 'inactivo' : !canSend }]" v-on:click="enviarDatos" :disabled="!canSend">
+                                <i class="i-izq" :class="canSend ? 'icon-whatsapp':'icon-lock'"></i>
+                                <span class="textos">
+                                    <span>Auno no puede enviar</span>
+                                    <span>Enviar whatsapp</span>
+                                </span>
                             </button>
                         </div>
                     </form>
@@ -300,6 +305,28 @@
             A tus sueñoss
         </div>
     </footer>
+    <style type="text/css">
+        .btn-whapp:disabled {
+            filter: grayscale(70%);
+        }
+        .btn-whapp .textos {
+            position: relative;
+            display: inline-flex;
+            flex-direction: column;
+            transition: all ease-in-out 200ms;
+        }
+        .btn-whapp .textos span:nth-child(2) {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 1rem);
+        }
+        .btn-whapp.inactivo .textos {
+            transform: translateY(calc(-100% + 1rem));
+        }
+        .btn-whapp .textos {
+            transform: translateY(-200%);
+        }
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
     <script type="text/javascript" src="assets/js/script-movil.js"></script>
     <script type="text/javascript" src="assets/js/jscript.js"></script>

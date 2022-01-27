@@ -164,9 +164,9 @@ Vue.component('movil-aside', {
                     ancla: 'Dominamos'
                 },
                 {
-                    id: '#galeria',
+                    id: '#descamos',
                     icon: 'icon-image',
-                    ancla: 'Galería'
+                    ancla: 'Sobre nosotros'
                 },
             ],
             dataCortina: {

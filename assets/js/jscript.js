@@ -255,13 +255,14 @@ const seleccion = new Vue({
             }
             if (validateEmail(this.formDato.correo) && validarTexto(this.formDato.nombre)) {
                 console.log('hila');
-                let urlwhatsapp = 'https://api.whatsapp.com/send?phone=+573016201299&text=';
+                let numero = '3178388674';
+                let urlwhatsapp = 'https://api.whatsapp.com/send?phone=+57'+numero+'text=';
                 let msj = urlwhatsapp +
-                          '¡Un gusto ponerme en contacto con tigo!. nombre: ' +
+                          '¡Un gusto ponerme en contacto con tigo!. mi nombre es: ' +
                           this.formDato.nombre +
-                          'correo: ' +
+                          ', correo: ' +
                           this.formDato.correo +
-                          'carrito: ' +
+                          ', servicios que quiero: ' +
                           itensCarrito +
                           ' mensaje: ' +
                           this.formDato.descripcion;

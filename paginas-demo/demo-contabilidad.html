@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plantilla php / Bodega</title>
+    <link rel="stylesheet" href="../assets/iconos.css">
+    <link rel="stylesheet" href="../assets/css/fusion.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/sistema/css.css">
+</head>
+
+<body>
+    <!--==================================
+=            cuerpo          =
+===================================-->
+    <main class="flexi">
+        <section class="cel-2">
+            <div class="pos-pegajosa sombra-peq pant-lg">
+                <nav class="nav-contenedor">
+                    <div class="cart-usuario-sidebar tema-gra-pre estilo-claro">
+                        <div class="bloq-cel">
+                            <div class="bloq-icono tam-gra borde-sombra-min">
+                                <i class="icon-stats-dots t-h4"></i>
+                            </div>
+                        </div>
+                        <div class="bloq-contenido">
+                            <h4 class="f-titulo">Nombre de usuario</h4>
+                            <ul class="bloq-ul direccion-fila sep-barr">
+                                <li class="bloq-li">Autor</li>
+                                <li class="bloq-li">Obras</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="nav-ver nav-dividido">
+                        <li>
+                            <a class="nav-enlace" href="#">
+                                <i class="li-icono icon-office tex-pre"></i>
+                                <span>Bodega</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-enlace" href="#">
+                                <i class="li-icono icon-upload tex-pre"></i>
+                                <span>Vender</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-enlace" href="#">
+                                <i class="li-icono icon-user tex-pre"></i>
+                                <span>Clientes</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="cel-10">
+            <div class="flexi">
+                <div class="cel-12">
+                    <nav class="nav-contenedor sombra-peq just-entre">
+                        <ul class="nav-hor nav-dividido">
+                            <li class="tema-pre">
+                                <a class="nav-enlace" href="#">
+                                    <i class="li-icono icon-home"></i>
+                                    <span>Inicio</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav-hor nav-dividido">
+                            <li>
+                                <a class="nav-enlace" href="#">
+                                    <i class="li-icono icon-notification"></i>
+                                    <span>Notificaciones</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="" class="nav-enlace tarj-enlace">
+                                    <div class="bloq-icono tema-pre">
+                                        <i class="icon-user-tie"></i>
+                                    </div>
+                                    <div class="bloq">
+                                        <div class="bloq-cel titulo">Juancho</div>
+                                        <div class="bloq-cel texto-pie">Administrador</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="flexi rell-peq">
+                <div class="flexi" id="app-bodega">
+                    <!--=====================================
+=            Section comment            =
+======================================-->
+                    <div class="cel-8 rell-der-peq">
+                        <div class="tarj-bagon sombra-med redon-med">
+                            <div class="bloq-contenedor borde-der punta-der">
+                                <div class="bloq-icono tam-med tema-gra-pre">
+                                    <i class="icon-enter"></i>
+                                </div>
+                                <div class="bloq">
+                                    <span class="bloq-cel titulo">Entrada</span>
+                                    <h5 class="bloq-cel titulo-principal">
+                                        4.605.000 </h5>
+                                </div>
+                            </div>
+                            <div class="bloq-contenedor borde-der punta-der">
+                                <div class="bloq-icono tam-med tema-gra-pre">
+                                    <i class="icon-exit"></i>
+                                </div>
+                                <div class="bloq">
+                                    <span class="bloq-cel titulo">Salida</span>
+                                    <h5 class="bloq-cel titulo-principal">
+                                        0 </h5>
+                                </div>
+                            </div>
+                            <div class="bloq-contenedor borde-der punta-der">
+                                <div class="bloq-icono tam-med tema-gra-pre">
+                                    <i class="icon-office"></i>
+                                </div>
+                                <div class="bloq">
+                                    <span class="bloq-cel titulo">Stock</span>
+                                    <h5 class="bloq-cel titulo-principal">
+                                        5.842.500 </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flexi just-entre alin-centro marg-aba-peq">
+                            <div class="form cel-auto marg-0">
+                                <div class="bloq-form">
+                                    <input type="search" placeholder="Burcar" v-model="filtrarDato" v-on:keyup.passive="filtrar" class="borde-todo borde-pre">
+                                </div>
+                                <button type="button" @click="filtrar" class="tema-pre">
+                                    <i class="icon-search"></i>
+                                </button>
+                            </div>
+                            <button type="button" class="boton tema-pre" @click="ventanaNuevo = !ventanaNuevo">Agregar nuevo</button>
+                        </div>
+                        <div class="bloque sombra-med redon-med rell-peq">
+                            <table class="bloque-tabla borde-todo">
+                                <caption class="tex-n">Bodega</caption>
+                                <thead class="tema-pre bord-claro">
+                                    <tr>
+                                        <th rowspan="2">Articulo</th>
+                                        <th rowspan="2" class="borde-der">Valor Unid</th>
+                                        <th colspan="2">Entrada</th>
+                                        <th colspan="2">Salida</th>
+                                        <th colspan="2">Stock</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Cant</th>
+                                        <th>Valor T.</th>
+                                        <th>Cant</th>
+                                        <th>Valor T.</th>
+                                        <th>Cant</th>
+                                        <th>Valor T.</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpo-tabla">
+                                    <tr class="fondo-pre-s" data-filtro="nevera">
+                                        <td class="tex-n">
+                                            <a href="#" title="">
+                                                nevera </a>
+                                        </td>
+                                        <td>780.000</td>
+                                        <td>2</td>
+                                        <td>1.560.000</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                        <td>1.560.000</td>
+                                    </tr>
+                                    <tr class="" data-filtro="estufa 4 tiempos con mofle">
+                                        <td class="tex-n">
+                                            <a href="#" title="">
+                                                estufa 4 tiempos con mofle </a>
+                                        </td>
+                                        <td>425.000</td>
+                                        <td>4</td>
+                                        <td>1.700.000</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>4</td>
+                                        <td>1.700.000</td>
+                                    </tr>
+                                    <tr class="" data-filtro="portatil hp q200">
+                                        <td class="tex-n">
+                                            <a href="#" title="">
+                                                portatil hp Q200 </a>
+                                        </td>
+                                        <td>500.500</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                        <td>1.001.000</td>
+                                    </tr>
+                                    <tr class="" data-filtro="buzo azul master">
+                                        <td class="tex-n">
+                                            <a href="#" title="">
+                                                buzo azul master </a>
+                                        </td>
+                                        <td>47.300</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>5</td>
+                                        <td>236.500</td>
+                                    </tr>
+                                    <tr class="" data-filtro="estufa master 4 fogatas">
+                                        <td class="tex-n">
+                                            <a href="#" title="">
+                                                Estufa master 4 fogatas </a>
+                                        </td>
+                                        <td>210.000</td>
+                                        <td>3</td>
+                                        <td>630.000</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>3</td>
+                                        <td>630.000</td>
+                                    </tr>
+                                    <tr class="" data-filtro="nevera sifrost">
+                                        <td class="tex-n">
+                                            <a href="#" title="">
+                                                Nevera sifrost </a>
+                                        </td>
+                                        <td>340.000</td>
+                                        <td>1</td>
+                                        <td>340.000</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>340.000</td>
+                                    </tr>
+                                    <tr class="" data-filtro="cafetera estrella 1 ltr">
+                                        <td class="tex-n">
+                                            <a href="#" title="">
+                                                Cafetera estrella 1 ltr </a>
+                                        </td>
+                                        <td>37.500</td>
+                                        <td>10</td>
+                                        <td>375.000</td>
+                                        <td></td>
+                                        <td>0</td>
+                                        <td>10</td>
+                                        <td>375.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--==================================
+=            agregar dato            =
+===================================-->
+                        <section :class="['caja-cortina-pant flexi alin-centro just-centro vidrio-claro-2', {'pant-visible' : !ventanaNuevo}]">
+                            <div class="cel-5 rell-peq sombra-med fondo-claro redon-med efecto">
+                                <h5 class="alin-cen tex-pre t-h5 marg-sep-peq">Agregar Nuevo producto a bodega</h5>
+                                <!-- formulario -->
+                                <form action="" method="post" accept-charset="utf-8" class="form direccion-columna">
+                                    <div class="bloq-cel">
+                                        <div class="bloq-form input-icono-der an-12">
+                                            <input type="text" placeholder="Nombre" name="nombre" required />
+                                            <div class="bloq-form-icono">
+                                                <i class="icon-pencil2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-ul direccion-fila">
+                                        <div class="bloq-form input-icono-der bloq-form-grupo">
+                                            <input type="text" placeholder="Costo por unidad" name="valor" required v-model="costoCompra.valorUnidad" />
+                                            <div class="bloq-form-icono">
+                                                <i class="icon-coin-dollar"></i>
+                                            </div>
+                                        </div>
+                                        <div class="bloq-form-auto" style="width: 150px">
+                                            <input type="number" placeholder="Cantidad" min="0" name="cantidad" required v-model="costoCompra.cantidadComprada" />
+                                        </div>
+                                    </div>
+                                    <div class="flexi just-entre rell-peq alin-der">
+                                        <span><i class="icon-calendar marg-der-peq"></i> 02-04-2021</span>
+                                        <div class="cel-auto t-h5">
+                                            <span class="tex-mudo">Total:</span> {{ costoCompra.valorUnidad * costoCompra.cantidadComprada }}
+                                        </div>
+                                    </div>
+                                    <div class="flexi">
+                                        <button type="submit" name="agregarBodega" class="boton an-8 redon-nulo tema-acierto">Agregar</button>
+                                        <button type="button" class="boton an-4 redon-nulo tema-mate" @click="ventanaNuevo = !ventanaNuevo">Cerrar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                        <!--====  End of agregar dato  ====-->
+                    </div>
+                    <div class="cel-4">
+                        <div class="cart sombra-med redon-med desborde-oculto">
+                            <div class="bloq-cel rell-peq alin-cen tema-pre">
+                                nevera </div>
+                            <div class="bloq-cel rell-peq t-med">
+                                Valor de venta unidad: <strong class="t-h5"></strong>
+                            </div>
+                            <table class="bloque-tabla borde-todo">
+                                <thead class="tema-pre bord-claro">
+                                    <tr>
+                                        <th>Detalled</th>
+                                        <th>Cantidad</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Entrada</td>
+                                        <td>2</td>
+                                        <td>1.560.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Salida</td>
+                                        <td></td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bodega</td>
+                                        <td>2</td>
+                                        <td>1.560.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bloq-cel rell-peq t-med fondo-pre-s">
+                                Producto general vendido
+                            </div>
+                            <table class="bloque-tabla borde-todo">
+                                <thead class="tema-pre bord-claro">
+                                    <tr>
+                                        <th>Cobrado</th>
+                                        <th>Fuera</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bloque alin-der rell-peq">
+                                <button type="button" class="boton tema-pre" @click="ventanaActualizar = !ventanaActualizar">Actualizar datos</button>
+                            </div>
+                        </div>
+                        <!-- ======================================
+=            actualizar datos            =
+=======================================-->
+                        <section :class="['caja-cortina-pant flexi alin-centro just-centro vidrio-claro-2', {'pant-visible' : !ventanaActualizar}]">
+                            <div class="flexi an-8 rell-peq sombra-med fondo-claro redon-med efecto">
+                                <div class="cel-6 rell-der-med">
+                                    <h5 class="alin-cen tex-pre t-h5 marg-sep-peq">datos actuales</h5>
+                                    <table class="bloque-tabla borde-fila">
+                                        <tbody>
+                                            <tr>
+                                                <td>Nombre:</td>
+                                                <td class="tex-n">nevera</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cantidad entrada:</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="icon-arrow-down-left tex-info marg-der-peq"></i> Precio de compra:</td>
+                                                <td>$ 780000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cantidad en bodega:</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="icon-arrow-up-right tex-acierto marg-der-peq"></i> Precio de venta:</td>
+                                                <td>$ </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="cel-6">
+                                    <h5 class="alin-cen tex-pre t-h5 marg-sep-peq">Actialuzar producto</h5>
+                                    <!-- formulario -->
+                                    <form action="#" method="post" accept-charset="utf-8" class="form direccion-columna">
+                                        <!-- datos actuales -->
+                                        <input type="hidden" name="cantActual" value="2">
+                                        <input type="hidden" name="costoActual" value="780000">
+                                        <input type="hidden" name="nombreActual" value="nevera">
+                                        <!-- actualizar -->
+                                        <div class="bloq-cel">
+                                            <div class="bloq-form input-icono-der an-12">
+                                                <input type="text" placeholder="Nombre" name="nombreNuevo" value="nevera" />
+                                                <div class="bloq-form-icono">
+                                                    <i class="icon-pencil2"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-ul direccion-fila">
+                                            <div class="bloq-form-auto" style="width: 150px;">
+                                                <input type="number" placeholder="Cantidad" class="bloq-form-grupo" min="-2" name="nuevacantidad" />
+                                            </div>
+                                            <div class="bloq-form input-icono-der bloq-form-grupo">
+                                                <input type="text" placeholder="780000" value="780000" name="costoNuevo" required />
+                                                <div class="bloq-form-icono">
+                                                    <i class="icon-coin-dollar"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-ul direccion-fila alin-centro">
+                                            <div class="bloq-form-auto" style="width: 150px;">
+                                                Precio de venta:
+                                            </div>
+                                            <div class="bloq-form input-icono-der bloq-form-grupo">
+                                                <input type="text" value="" name="valorVenta" />
+                                                <div class="bloq-form-icono">
+                                                    <i class="icon-coin-dollar"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flexi">
+                                            <button type="submit" name="actualizarBodega" class="boton an-5 redon-nulo tema-acierto">Actualizar</button>
+                                            <button type="button" class="boton an-5 redon-nulo tema-mate" @click="ventanaActualizar = !ventanaActualizar">Cerrar</button>
+                                            <button type="submit" name="eliminar" class="boton an-2 redon-nulo tema-peligro"><i class="icon-bin2"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <!-- fin cuerpo -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="assets/sistema/js.min.js"></script>
+</body>
+
+</html>

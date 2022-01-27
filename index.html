@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock gráficos portafolio</title>
+    <meta name="author" content="Apock graficos">
+    <meta name="description" content="Diseñador y desarrollador web Front-end, Colombiano">
+    <meta name="keywords" content="Desarrollador front-end, diseñador grafico, desarrollador de interfaz grafica con tecnologia web">
+    <link rel="icon" href="assets/img/icon-apock-graficos.ico">
+    <link rel="stylesheet" type="text/css" href="assets/css/fusion.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos-generales.css">
+    <link rel="stylesheet" type="text/css" href="assets/iconos.css">
+    <link rel="stylesheet" type="text/css" href="assets/icon-font/devicon.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+
+<body>
+    <header class="contenedor">
+        <div class="flexi just-centro tema-gra-pre">
+            <div class="panel-top flexi just-centro">
+                <article class="tarj presentacion-header t-med">
+                    <div class="bloq-avatar tam-med marg-der-med borde-sombra-peq">
+                        <img src="assets/img/AG-Desing.png" alt="">
+                    </div>
+                    <div class="bloq">
+                        <p class="bloq globo sombra-peq flecha-izq tema-pre">
+                            ¡Hoola. y bienvenido a Apock gráficos!
+                        </p>
+                        <p class="bloq globo sombra-peq tema-pre">
+                            Has un tour de todo lo que hacemos, así nos conocerás y tendrás la confianza de realizar tus proyecto con nosotros.
+                        </p>
+                    </div>
+                </article>
+                <div class="pos-absoluta botones-redes flexcol">
+                    <a href="#" class="boton-cir peq tema-claro" title="">
+                        <i class="icon-facebook"></i>
+                    </a>
+                    <a href="#" class="boton-cir peq tema-claro" title="">
+                        <i class="icon-instagram"></i>
+                    </a>
+                    <a href="#" class="boton-cir peq tema-claro" title="">
+                        <i class="icon-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="fondo bloque" id="fondo_anim"></div>
+    </header>
+    <main class="contenedor anmax-gra">
+        <div class="flexi just-centro seccion-prim anmax-heredado">
+            <div class="cel-9 tb-11 flexi">
+                <div class="cel-auto pant-tb-nula prioridad-med" id="app-movil">
+                    <!--=============================
+                =            celular            =
+                ==============================-->
+                    <movil-aside></movil-aside>
+                    <!--====  End of celular  ====-->
+                </div>
+                <!-- seccion dos -->
+                <div class="cel tb-12 marg-izq-gra">
+                    <div class="flexi just-final">
+                        <div class="cel-11 tb-12 marg-aba-gra">
+                            <div class="contenedor" id="conocenos">
+                                <div class="bloque rell-med tema-claro redon-med sombra-med">
+                                    <h3 class="marg-aba-peq">¡Conocenos!</h3>
+                                    <div class="bloque t-med">
+                                        <p>Hola! me llamo Yenerson Hernández. Desarrollador y diseñador Front-end.<br>He participado en múltiples proyectos de mi País el cual están satisfechos con mi trabajo</p>
+                                        <p>Mis habilidades principales</p>
+                                    </div>
+                                </div>
+                                <div class="flexi just-final seccion-yenerson alin-der marg-arr--med marg-aba-peq pos-relativa">
+                                    <div class="yener-img">
+                                        <div class="grupo-barras pant-mv-nula">
+                                            <div class="barra sombra-med" v-for="item of skillsYener" :key="item.id">
+                                                {{ item }}
+                                            </div>
+                                        </div>
+                                        <img class="img-yenr-yel" src="assets/img/alone.png" alt="Apock graficos yenerson hernandez lopez">
+                                    </div>
+                                    <span class="bloq-flo nombre-yenr t-h4 flecha-aba fle-med">
+                                        Yenerson H.L
+                                    </span>
+                                </div>
+                                <div class="bloque seccion-yelainer pos-relativa">
+                                    <div class="yela-img">
+                                        <img src="assets/img/yelainer-baja.png" alt="">
+                                        <div class="grupo-barras pant-mv-nula alin-der">
+                                            <div class="barra sombra-med" v-for="item of skillsYela" :key="item.id">
+                                                {{ item }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="bloq-flo nombre-crow t-h4 flecha-arr fle-med">
+                                        Yelainer H.L
+                                    </span>
+                                </div>
+                                <div class="bloque rell-med tema-claro redon-med sombra-gra">
+                                    <div class="bloque t-med">
+                                        <p>somos desarrolladores y diseñadores gráficos. manejamos múltiples herramientas para crear ilustraciones originales.</p>
+                                        <p>siempre tenemos nuevas ideas en cada diseño para que cada uno se distinga de otro</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- skills -->
+                        <div class="contenedor marg-arr-gra" id="dominamos">
+                            <div class="cel-12">
+                                <article class="tarj presentacion-header t-med">
+                                    <div class="bloq-avatar tam-med marg-der-med borde-sombra-peq">
+                                        <img src="assets/img/AG-Desing.png" alt="">
+                                    </div>
+                                    <div class="bloq flexi alin-inicio">
+                                        <div class="bloq-auto globo sombra-peq flecha-izq tema-pre marg-aba-peq">
+                                            <h5 class="marg-aba-min">Experiencias</h5>
+                                            <p>Diseñamos y desarrollamos aplicaciones de, escritorio, web, y móviles con tecnología web</p>
+                                        </div>
+                                        <div class="bloq-auto globo sombra-peq tema-pre">
+                                            <h5>Campos que dominamos</h5>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="flexi just-centro marg-aba-med pos-relativa perfil-skills fondo-claro prioridad-nor" style="position: sticky; top: 0;">
+                                <div class="flexi just-espaciar rell-arr-gra">
+                                    <div class="cel-auto" v-for="perfil of perfiles" :key="perfil.id">
+                                        <div class="bloq-avatar tam-med cur-mano" v-on:click="perfilskills(perfil.name)">
+                                            <img :src="perfil.img" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-bind:class="['punta-arr punt-med hr borde-pre', { 'next': punta }]"></div>
+                            </div>
+                            <div class="flexcol cel-12 marg-aba-gra" id="niveles">
+                                <div v-bind:class="['tarj barra-nivel', iten.tema]" v-for="iten of skills" :key="iten.id">
+                                    <div v-bind:class="['cel-auto marg-der-gra t-h1', iten.tema]">
+                                        <i v-bind:class="['icono', iten.icon]"></i>
+                                    </div>
+                                    <div class="cel">
+                                        <h5 class="titulo">{{ iten.titulo }}</h5>
+                                        <span class="t-med">{{ iten.texto }}</span>
+                                        <div class="bloq-cel nivel sombra-med">
+                                            <div class="barra" v-bind:style="'width:'+ iten.porcentaje +'%'">
+                                                <span v-for="i in 4" :key="i.id"></span>
+                                                <div class="burbuja-porcentaje flexi alin-centro just-centro flecha-arr sombra-med">
+                                                    <span>{{ iten.porcentaje }}%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="cel-11 tb-12 marg-aba-gra">
+                            <article class="tarj presentacion-header t-med">
+                                <div class="bloq-avatar tam-med marg-der-med borde-sombra-peq">
+                                    <img src="assets/img/AG-Desing.png" alt="">
+                                </div>
+                                <div class="bloq flexi alin-inicio">
+                                    <p class="bloq-auto globo sombra-peq flecha-izq tema-pre">
+                                        Aquí una presentación de nuestra capacidad creativa. dale <b>click</b> en cualquiera para ver mas
+                                    </p>
+                                    <p class="bloq-auto globo sombra-peq tema-pre">
+                                        Tres estilos de paginas diferentes!
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="celda-col-2 fil-2 sep-peq an-11 tb-12 alin-celdas prioridad-med" id="galeria">
+                            <a
+                            target="_blank"
+                            :href="item.url"
+                            class="cart sombra-med redon-med desborde-oculto"
+                            v-for="item of demos">
+                                <img :src="item.img" alt="">
+                                <div class="bloq-cortina flexi just-centro alin-centro vidrio-pre">
+                                    <div class="bloq-flo alin-cen tex-claro rell-med">
+                                        <h4 class="marg-aba-peq">{{ item.titulo }}</h4>
+                                        <span class="t-med">{{ item.desc }}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="flexi lg-med fondo-fijo seccion-queso prioridad-nor">
+            <span class="bloq-cortina"></span>
+            <div class="img-yenr pant-tb-nula">
+                <img src="assets/img/yenr-1.png" alt="">
+                <img src="assets/img/yenr-2.png" alt="">
+            </div>
+            <div class="seccion-tarj">
+                <div class="tarj-creativa rell-peq fondo-claro sombra-med redon-red alin-centro">
+                    <div class="bloq-icono tam-gra gradiante-cielo">
+                        <i class="icon-cool2 t-h3"></i>
+                    </div>
+                    <div class="bloq-cuerpo marg-izq-med">
+                        <h5 class="marg-aba-min texto-cielo">Siempre estamos llenos de ideas</h5>
+                        <p class="t-med tex-mudo">Dibujamos desde que tenemos memoria lo cual nos facilita la creación de diseños y nuevas ideas en cada proyecto</p>
+                    </div>
+                </div>
+                <div class="tarj-creativa rell-peq fondo-claro sombra-med redon-red alin-centro">
+                    <div class="bloq-icono tam-gra gradiante-purpura">
+                        <i class="icon-user-plus t-h3"></i>
+                    </div>
+                    <div class="bloq-cuerpo marg-izq-med">
+                        <h5 class="marg-aba-min texto-purpura">Participación de tu proyecto</h5>
+                        <p class="t-med tex-mudo">Tendras espacio para dar ideas. mientras el proyecto esta en desarrollo</p>
+                    </div>
+                </div>
+                <div class="tarj-creativa rell-peq fondo-claro sombra-med redon-red alin-centro">
+                    <div class="bloq-icono tam-gra gradiante-naranja">
+                        <i class="icon-checkmark t-h3"></i>
+                    </div>
+                    <div class="bloq-cuerpo marg-izq-med">
+                        <h5 class="marg-aba-min texto-naranja">Diseño originales</h5>
+                        <p class="t-med tex-mudo">Siempre analizamos el diseño del proyecto con paginas actuales para que tenga su propio diseño</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="flexi just-centro marg-aba-gra" id="seleccion">
+            <div class="cel-9" id="correo">
+                <div class="flexi secciones-drag">
+                    <div class="cel-6 tb-12 borde-der pant-tb-nula">
+                        <div class="bloque marg-aba-peq">
+                            <h4 class="texto-violeta">¿Qué quieres que hagamos?</h4>
+                            <p class="tex-mudo t-med">Arrastra los elementos al Carrito, según tu proyecto</p>
+                        </div>
+                        <div class="celda-col-3 sep-med lista marg-aba-med" id="listaUno">
+                            <div class="cart-seleccion alin-centro sombra-med cur-mover" v-for="iten of seleccion">
+                                <div class="bloq-icono tam-gra gradiante-violeta marg-aba-min">
+                                    <i v-bind:class="['t-h4', iten.icon]"></i>
+                                </div>
+                                <div class="bloq-cel alin-cen">
+                                    <h6 class="t-peq">{{ iten.titulo }}</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-ususario-divisor">
+                            <div class="boq-cel cabecera">
+                                <div class="bloq-icono tam-med">
+                                    <i class="icon-neutral" id="carita"></i>
+                                </div>
+                            </div>
+                            <div class="bloq-cuerpo">
+                                <p class="bloq-cel descripcion">descripcion corta del perfil</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cel-divisor pant-tb-nula">
+                        <div class="bloq-icono sombra-peq tema-claro tam-med">
+                            <i class="icon-redo2"></i>
+                        </div>
+                    </div>
+                    <form class="cel-6 tb-12" method="post" action="#" v-on:submit.prevent>
+                        <div class="pant-tb-nula">
+                            <div class="bloque marg-aba-peq">
+                                <h4 class="texto-cielo"><i class="icon-cart i-izq"></i> Carrito.</h4>
+                                <p class="tex-mudo t-med">Carrito de lo que quiero :D</p>
+                            </div>
+                            <div class="bloque scroll-y marg-aba-peq" style="height: 170px;">
+                                <div class="celda-col-3 sep-med lista marg-aba-med" id="listaDos">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form estilo-burbuja direccion-columna">
+                            <input type="text" placeholder="Nombre completo" v-model="formDato.nombre" maxlength="120" required>
+                            <input type="email" placeholder="correo" v-model="formDato.correo" maxlength="120" required>
+                            <div class="bloq-form tipo-texarea">
+                                <textarea placeholder="Mensaje" v-model="formDato.descripcion" maxlength="250" required></textarea>
+                                <div v-bind:class="['bloq-flo', colorTexto]">
+                                    {{ contCaractDesc }}
+                                </div>
+                            </div>
+                            <button type="button" class="boton gradiante-cielo" v-on:click="enviarDatos">
+                                <i class="icon-whatsapp i-izq"></i> Enviar whatsapp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="flexi alin-centro just-entre rell-ver-med">
+        <div class="cel-4 alin-der">
+            No renuncies
+        </div>
+        <div class="cel-4 alin-cen">
+            <img src="assets/img/AG-Desing.png" alt="" width="80">
+            <p class="bloque marg-arr-min t-med tex-mudo">
+                Apock gráficos
+            </p>
+        </div>
+        <div class="cel-4 alin-izq">
+            A tus sueñoss
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+    <script type="text/javascript" src="assets/js/script-movil.js"></script>
+    <script type="text/javascript" src="assets/js/jscript.js"></script>
+</body>
+
+</html>

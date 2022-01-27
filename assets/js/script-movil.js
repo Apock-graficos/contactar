@@ -37,7 +37,7 @@ Vue.component('movil-aside', {
                 <span class="t-peq">Colombia</span>
             </div>
             <div class="celda-col-3 sep-med rell-hor-med alin-cen tex-claro botones-menu">
-                <a v-bind:target="iten.target ? '_black' : '_self'" v-bind:href="iten.url ? iten.url : '#'" v-for="iten of botones" :key="iten.id" class="cart item-button alin-centro" v-bind:data-id="iten.id">
+                <a v-bind:target="iten.target ? '_black' : '_self'" v-bind:href="iten.url ? iten.url : '#'" v-for="(iten, index) of botones" :key="index" class="cart item-button alin-centro" v-bind:data-id="iten.id">
                     <div v-bind:class="['bloq-icono redon-med tam-med sombra-gra', iten.tema]">
                         <i v-bind:class="iten.icon"></i>
                     </div>
@@ -50,7 +50,7 @@ Vue.component('movil-aside', {
                     <div class="cart-usuario-sidebar sombra-min">
                         <div class="bloq-cel">
                             <div class="bloq-avatar tam-gra borde-sombra-min">
-                                <img src="@/assets/mult/img/AG-Desing.png" alt="">
+                                <img src="assets/img/AG-Desing.png" alt="">
                             </div>
                             <div class="blo-auto">
                                 <button type="button" class="boton-cir tema-claro efecto-clic efecto-neg" v-on:click="open = false">
@@ -68,7 +68,7 @@ Vue.component('movil-aside', {
                     </div>
                     <ul class="nav-ver nav-dividido">
                         <li>
-                            <a v-bind:href="iten.id" class="nav-enlace" v-for="iten of navegacion" :key="iten">
+                            <a v-bind:href="iten.id" class="nav-enlace" v-for="(iten, index) of navegacion" :key="index">
                                 <i v-bind:class="['li-icono', iten.icon]"></i> {{ iten.ancla }}
                             </a>
                         </li>

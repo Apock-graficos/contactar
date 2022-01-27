@@ -156,7 +156,7 @@ Vue.component('movil-aside', {
                     subs: 'mas de 100 subs'
                 },
                 {
-                    id: 'iten-6',
+                    id: 'iten-6', 
                     titulo: 'whatsapp',
                     icon: 'icon-whatsapp',
                     dato: 'Contactanos para tener el gusto de atenderte',

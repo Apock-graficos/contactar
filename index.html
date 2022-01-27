@@ -35,13 +35,13 @@
                     </div>
                 </article>
                 <div class="pos-absoluta botones-redes flexcol">
-                    <a href="#" class="boton-cir peq tema-claro" title="">
-                        <i class="icon-facebook"></i>
+                    <a href="https://github.com/Apock-graficos" target="_blank" class="boton-cir peq tema-claro" title="">
+                        <i class="devicon-github-plain"></i>
                     </a>
-                    <a href="#" class="boton-cir peq tema-claro" title="">
+                    <a href="https://www.instagram.com/apockgraficos" target="_blank" class="boton-cir peq tema-claro" title="">
                         <i class="icon-instagram"></i>
                     </a>
-                    <a href="#" class="boton-cir peq tema-claro" title="">
+                    <a href="https://www.youtube.com/ApockGraficos" target="_blank" class="boton-cir peq tema-claro" title="">
                         <i class="icon-youtube"></i>
                     </a>
                 </div>
@@ -306,25 +306,13 @@
         </div>
     </footer>
     <style type="text/css">
-        .btn-whapp:disabled {
-            filter: grayscale(70%);
-        }
-        .btn-whapp .textos {
-            position: relative;
-            display: inline-flex;
-            flex-direction: column;
-            transition: all ease-in-out 200ms;
-        }
-        .btn-whapp .textos span:nth-child(2) {
-            position: absolute;
-            left: 0;
-            top: calc(100% + 1rem);
-        }
-        .btn-whapp.inactivo .textos {
-            transform: translateY(calc(-100% + 1rem));
-        }
-        .btn-whapp .textos {
-            transform: translateY(-200%);
+        @media (max-width: 825px) {
+            .botones-redes {
+                position: fixed;
+                top: 15px;
+                right: 15px;
+                margin-right: 0.5rem;
+            }
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>

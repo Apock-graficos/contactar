@@ -1106,3 +1106,24 @@ Carta avatar
 .perfil-skills .hr.next::before {
             left: calc(75% - 10px);
         }
+
+.btn-whapp:disabled {
+            filter: grayscale(70%);
+        }
+        .btn-whapp .textos {
+            position: relative;
+            display: inline-flex;
+            flex-direction: column;
+            transition: all ease-in-out 200ms;
+        }
+        .btn-whapp .textos span:nth-child(2) {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 1rem);
+        }
+        .btn-whapp.inactivo .textos {
+            transform: translateY(calc(-100% + 1rem));
+        }
+        .btn-whapp .textos {
+            transform: translateY(-200%);
+        }

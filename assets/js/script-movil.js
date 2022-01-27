@@ -116,7 +116,7 @@ Vue.component('movil-aside', {
                 {
                     target: true,
                     id: 'iten-3',
-                    url: 'https://www.youtube.com/channel/UC15DkMZQ80aoW_Rqk4n2T_w',
+                    url: 'https://www.youtube.com/ApockGraficos',
                     tema: 'tema-peligro',
                     icon: 'icon-youtube',
                     titulo: 'youtube',

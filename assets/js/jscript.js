@@ -82,7 +82,7 @@ const dominamos = new Vue({
                 tema: 'nivel-rojo',
                 icon: 'devicon-angularjs-plain',
                 titulo: 'Angular',
-                texto: 'Mi segunda libreria favorita ya que usa typescript <3. conocimiento de NgRx',
+                texto: 'Mi segunda libreria favorita ya que usa typescript <3. gran conocimiento de sus librerias como NgRx, Material, ',
                 porcentaje: 72
             },
         ],
@@ -91,7 +91,7 @@ const dominamos = new Vue({
                 tema: 'nivel-rojo',
                 icon: 'devicon-java-plain',
                 titulo: 'Java',
-                texto: 'Creo aplicaciones aplicaciones escalables, multiplataforma',
+                texto: 'Creo aplicaciones escalables, multiplataforma',
                 porcentaje: 70
             },
             {
@@ -112,7 +112,7 @@ const dominamos = new Vue({
                 tema: 'nivel-verde',
                 icon: 'devicon-spring-plain',
                 titulo: 'Sprin boot',
-                texto: 'Conocimiento en Spring para el desarrollo de aplicación multiplicadora mayormente lo suo para back-end',
+                texto: 'Desarrollo aplicaciones web con arquitectura MVC, generalmente para backend.',
                 porcentaje: 70
             },
             {

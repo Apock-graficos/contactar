@@ -1445,3 +1445,18 @@ Carta avatar
         opacity: 1;
     }
 }
+
+@media (max-width: 825px) {
+    .botones-redes {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        margin-right: 0.5rem;
+    }
+}
+
+.filtered {
+    filter: grayscale(80%);
+    background-color: #D5D5D5;
+    cursor: no-drop;
+}

@@ -99,8 +99,8 @@
                                 </div>
                                 <div class="bloque rell-med tema-claro redon-med sombra-gra">
                                     <div class="bloque t-med">
-                                        <p>Yo soy <strong class="tex-pre">Yeleinar Hernandez</strong> desarrollador Back-end y diseñador gráfico. me encargo de la interacción entre el usuario y la aplicación.<br>He desarrollado módulos para otorgar contenido dinámico basado en las necesidades de la aplicación</p>
-                                        <p>También me gusta crear diseño UX UI e ilustraciones gráficas</p>
+                                        <p>Somos creativo y siempre estamos llenos de ideas para aplicar en los proyectos que se nos presente.</p>
+                                        <p>También nos gusta crear diseño UX UI e ilustraciones gráficas</p>
                                     </div>
                                 </div>
                             </div>
@@ -114,11 +114,15 @@
                                     </div>
                                     <div class="bloq flexi alin-inicio">
                                         <div class="bloq-auto globo sombra-peq flecha-izq tema-pre marg-aba-peq">
-                                            <h5 class="marg-aba-min">Experiencias</h5>
-                                            <p>Diseñamos y desarrollamos aplicaciones de, escritorio, web, y móviles con tecnología web</p>
+                                            <h5 class="marg-aba-min">Campos que dominamos</h5>
+                                            <p>Como desarrolladores hemos dividido nuestro conocimiento para ampliar mas espacio en nuestro desarrollo.</p>
+                                            <ul>
+                                                <li>Yenerson de lado front-end</li>
+                                                <li>Yelainer en el lado de Back-end</li>
+                                            </ul>
                                         </div>
                                         <div class="bloq-auto globo sombra-peq tema-pre">
-                                            <h5>Campos que dominamos</h5>
+                                            <h5>Habilidades de: {{ nameselect }} HL.</h5>
                                         </div>
                                     </div>
                                 </article>
@@ -200,8 +204,8 @@
                         <i class="icon-cool2 t-h3"></i>
                     </div>
                     <div class="bloq-cuerpo marg-izq-med">
-                        <h5 class="marg-aba-min texto-cielo">Siempre estamos llenos de ideas</h5>
-                        <p class="t-med tex-mudo">Dibujamos desde que tenemos memoria lo cual nos facilita la creación de diseños y nuevas ideas en cada proyecto</p>
+                        <h5 class="marg-aba-min texto-cielo">Llenos de ideas</h5>
+                        <p class="t-med tex-mudo">Como creadores siempre estamos a la banguardia de ideas nuevas que aplicar en los proyectos que se no presentan.</p>
                     </div>
                 </div>
                 <div class="tarj-creativa rell-peq fondo-claro sombra-med redon-red alin-centro">
@@ -219,7 +223,7 @@
                     </div>
                     <div class="bloq-cuerpo marg-izq-med">
                         <h5 class="marg-aba-min texto-naranja">Diseño originales</h5>
-                        <p class="t-med tex-mudo">Aparte que desarrollamos aplicaciones, tenemos creatividad para crear diseños diferentes en cada proyecto</p>
+                        <p class="t-med tex-mudo">Dibujamos desde que tenemos memoria lo cual nos facilita la creación de diseños e ilustraciones. aun que reciclar es una opcion. bueno con unos cambios ya es nuevo :)</p>
                     </div>
                 </div>
             </div>
@@ -230,10 +234,10 @@
                     <div class="cel-6 tb-12 borde-der pant-tb-nula">
                         <div class="bloque marg-aba-peq">
                             <h4 class="texto-violeta">¿Qué quieres que hagamos?</h4>
-                            <p class="tex-mudo t-med">Arrastra los elementos al Carrito, según tu proyecto</p>
+                            <p class="tex-mudo t-med">Arrastra los elementos al Carrito, según lo que quieres de nosotros.</p>
                         </div>
                         <div class="celda-col-3 sep-med lista marg-aba-med" id="listaUno">
-                            <div class="cart-seleccion alin-centro sombra-med cur-mover" v-for="iten of seleccion">
+                            <div :class="['cart-seleccion alin-centro sombra-med cur-mover', { 'filtered' : iten.id === 0}]" v-for="iten of seleccion">
                                 <div class="bloq-icono tam-gra gradiante-violeta marg-aba-min">
                                     <i v-bind:class="['t-h4', iten.icon]"></i>
                                 </div>
@@ -302,19 +306,9 @@
             </p>
         </div>
         <div class="cel-4 alin-izq">
-            A tus sueñoss
+            A tus sueños
         </div>
     </footer>
-    <style type="text/css">
-    @media (max-width: 825px) {
-        .botones-redes {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            margin-right: 0.5rem;
-        }
-    }
-    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
     <script type="text/javascript" src="assets/js/script-movil.js"></script>
     <script type="text/javascript" src="assets/js/jscript.js"></script>

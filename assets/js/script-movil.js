@@ -60,10 +60,10 @@ Vue.component('movil-aside', {
                         </div>
                         <div class="bloq-contenido">
                             <h4 class="f-titulo">Navegación</h4>
-                            <ul class="bloq-ul direccion-fila sep-barr">
+                            <!-- <ul class="bloq-ul direccion-fila sep-barr">
                                 <li class="bloq-li">Autor</li>
                                 <li class="bloq-li">Obras</li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                     <ul class="nav-ver nav-dividido">

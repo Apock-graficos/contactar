@@ -35,6 +35,7 @@ const conocenos = new Vue({
 const dominamos = new Vue({
     el: '#dominamos',
     data: {
+        nameselect: 'Yenerson',
         punta: false,
         yenrskills: [
             {
@@ -161,9 +162,11 @@ const dominamos = new Vue({
     methods: {
         perfilskills(id){
             if(id === 'yela') {
+                this.nameselect = 'Yelainer';
                 this.punta = true;
                 this.skills = this.yelaskills
             } else {
+                this.nameselect = 'Yenerson';
                 this.punta = false;
                 this.skills = this.yenrskills
             }
@@ -202,38 +205,47 @@ const seleccion = new Vue({
         },
         seleccion: [
             {
-                icon: 'icon-paint-format',
-                titulo: 'Diseño de App'
+                id: 0,
+                icon: 'icon-user-tie',
+                titulo: 'Contratarnos'
             },
             {
+                id: 1,
                 icon: 'icon-files-empty',
                 titulo: 'app web'
             },
             {
+                id: 2,
                 icon: 'icon-file-play',
                 titulo: 'Animacion grafica'
             },
             {
+                id: 3,
                 icon: 'icon-drive',
                 titulo: 'Back-end'
             },
             {
-                icon: 'icon-loop2',
-                titulo: 'UX UI'
+                id: 4,
+                icon: 'icon-paint-format',
+                titulo: 'Diseño UX UI'
             },
             {
+                id: 5,
                 icon: 'icon-display',
                 titulo: 'App desktop'
             },
             {
+                id: 6,
                 icon: 'icon-mobile',
                 titulo: 'App movil'
             },
             {
+                id: 7,
                 icon: 'icon-pencil2',
                 titulo: 'Ilustraciones'
             },
             {
+                id: 8,
                 icon: 'icon-film',
                 titulo: 'Video edicion'
             },
@@ -332,6 +344,7 @@ fondo_anim.innerHTML = span;
 Sortable.create(listaUno, {
     animation: 150,
     group: "lista-uno",
+    filter: '.filtered',
 });
 
 Sortable.create(listaDos, {

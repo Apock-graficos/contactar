@@ -16,7 +16,23 @@
     <link rel="stylesheet" type="text/css" href="assets/icon-font/devicon.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
-
+<style type="text/css">
+.cursor-parpadeante::after {
+    content: '|';
+    display: inline-block;
+    margin-left: .1rem;
+    animation: parpadear 1000ms infinite normal both;
+    opacity: 0;
+}
+@keyframes parpadear {
+    from, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+</style>
 <body>
     <header class="contenedor">
         <div class="flexi just-centro tema-gra-pre">
@@ -67,8 +83,9 @@
                                 <div class="bloque rell-med tema-claro redon-med sombra-med">
                                     <h3 class="marg-aba-peq">¡Conocenos!</h3>
                                     <div class="bloque t-med">
-                                        <p>Hola! me llamo <strong class="tex-pre">Yenerson Hernández</strong>. Desarrollador y diseñador Front-end.<br>Me gusta todo lo que tiene que ver con el Front. He participado en múltiples proyectos de mi País. Dejando muchos clientes satisfechos con nuestro trabajo.</p>
-                                        <p>Mis habilidades principales</p>
+                                        <!-- <p>Hola! me llamo <strong class="tex-pre">Yenerson Hernández</strong>. Desarrollador y diseñador Front-end.<br>Me gusta todo lo que tiene que ver con el Front. He participado en múltiples proyectos de mi País. Dejando muchos clientes satisfechos con nuestro trabajo.</p>
+                                        <p>Mis habilidades principales</p> -->
+                                        <!--  --><p id="yuca" class="cursor-parpadeante"></p>
                                     </div>
                                 </div>
                                 <div class="flexi just-final seccion-yenerson alin-der marg-arr--med marg-aba-peq pos-relativa">
@@ -306,18 +323,41 @@
         </div>
     </footer>
     <style type="text/css">
-        @media (max-width: 825px) {
-            .botones-redes {
-                position: fixed;
-                top: 15px;
-                right: 15px;
-                margin-right: 0.5rem;
-            }
+    @media (max-width: 825px) {
+        .botones-redes {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            margin-right: 0.5rem;
         }
+    }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
     <script type="text/javascript" src="assets/js/script-movil.js"></script>
     <script type="text/javascript" src="assets/js/jscript.js"></script>
+    <script type="text/javascript">
+    function maquinaescribir(obj) {
+        let textoarr = Array.from(obj.texto);
+        let id = document.querySelector(obj.id);
+        let nuevotexto = '';
+        let i = 0;
+        let max = textoarr.length;
+        let textointerval = setInterval(() => {
+            i++;
+            nuevotexto += textoarr[i - 1];
+            id.innerText = nuevotexto;
+            if (i === max) {
+                clearInterval(textointerval);
+                textointerval = null;
+                id.classList.remove('cursor-parpadeante');
+            }
+        }, 100)
+    }
+    maquinaescribir({
+        id: '#yuca',
+        texto: 'Hola! me llamo Yenerson Hernández. Desarrollador y diseñador Front-end. Me gusta todo lo que tiene que ver con el Front. He participado en múltiples proyectos de mi País. Dejando muchos clientes satisfechos con nuestro trabajo.'
+    })
+    </script>
 </body>
 
 </html>

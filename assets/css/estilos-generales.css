@@ -666,6 +666,9 @@ Carta avatar
   height: 300px;
   overflow: hidden;
   background: linear-gradient(45deg, #BB59FF, #FD6FFF, #449CFF); }
+.tema-night .fondo {
+    background: linear-gradient(45deg, #101112, #2C2D31);
+}
 
 .fondo span {
   display: block;

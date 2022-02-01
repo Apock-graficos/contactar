@@ -38,13 +38,13 @@ const dominamos = new Vue({
         nameselect: 'Yenerson',
         punta: false,
         yenrskills: [
-            {
+            /*{
                 tema: 'nivel-verde',
                 icon: 'devicon-nodejs-plain',
                 titulo: 'Node js',
-                texto: 'Manejo de aplicaciones escalables. usando módulos como angular, vue, ionic entre otros paquetes.',
+                texto: 'Manejo de aplicaciones con express.',
                 porcentaje: 45
-            },
+            },*/
             {
                 tema: 'nivel-naranja',
                 icon: 'devicon-html5-plain',

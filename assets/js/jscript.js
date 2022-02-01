@@ -42,14 +42,14 @@ const dominamos = new Vue({
                 tema: 'nivel-verde',
                 icon: 'devicon-nodejs-plain',
                 titulo: 'Node js',
-                texto: 'Manejo de modulos',
+                texto: 'Manejo de aplicaciones escalables. usando módulos como angular, vue, ionic entre otros paquetes.',
                 porcentaje: 45
             },
             {
                 tema: 'nivel-naranja',
                 icon: 'devicon-html5-plain',
                 titulo: 'HTM5',
-                texto: 'Conocimeinto del 90% de las etiquetas HTML y SEO',
+                texto: 'Conocimiento del 90% de las etiquetas HTML y SEO',
                 porcentaje: 90
             },
             {
@@ -128,7 +128,7 @@ const dominamos = new Vue({
                 tema: 'nivel-cielo',
                 icon: 'devicon-ionic-original',
                 titulo: 'ionic',
-                texto: 'Creo aplicaciones hibridas ionic con el framework angular.',
+                texto: 'Creo aplicaciones híbridas ionic con el framework angular.',
                 porcentaje: 75
             },
             {

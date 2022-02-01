@@ -16,23 +16,6 @@
     <link rel="stylesheet" type="text/css" href="assets/icon-font/devicon.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
-<style type="text/css">
-.cursor-parpadeante::after {
-    content: '|';
-    display: inline-block;
-    margin-left: .1rem;
-    animation: parpadear 1000ms infinite normal both;
-    opacity: 0;
-}
-@keyframes parpadear {
-    from, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-</style>
 <body>
     <header class="contenedor">
         <div class="flexi just-centro tema-gra-pre">
@@ -335,29 +318,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
     <script type="text/javascript" src="assets/js/script-movil.js"></script>
     <script type="text/javascript" src="assets/js/jscript.js"></script>
-    <script type="text/javascript">
-    function maquinaescribir(obj) {
-        let textoarr = Array.from(obj.texto);
-        let id = document.querySelector(obj.id);
-        let nuevotexto = '';
-        let i = 0;
-        let max = textoarr.length;
-        let textointerval = setInterval(() => {
-            i++;
-            nuevotexto += textoarr[i - 1];
-            id.innerText = nuevotexto;
-            if (i === max) {
-                clearInterval(textointerval);
-                textointerval = null;
-                id.classList.remove('cursor-parpadeante');
-            }
-        }, 100)
-    }
-    maquinaescribir({
-        id: '#yuca',
-        texto: 'Hola! me llamo Yenerson Hernández. Desarrollador y diseñador Front-end. Me gusta todo lo que tiene que ver con el Front. He participado en múltiples proyectos de mi País. Dejando muchos clientes satisfechos con nuestro trabajo.'
-    })
-    </script>
 </body>
 
 </html>

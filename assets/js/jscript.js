@@ -1,26 +1,34 @@
-const validateEmail = (email) => {
-    const emailRegex = /^(([^<>()\[\]\\.,:\s@"]+(\.[^<>()\[\]\\.,:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(emailRegex.test(email)) {
-        return true;
-    }  else {
-        return false;
-    }
-};
-const validarTexto = (username) => {
-    //Alphanumeric string that may include _ and – having a length of 3 to 16 characters –
-    const usernameRegex = /^[a-z0-9 _-]{3,}$/;
-    if(usernameRegex.test(username)) {
-        return true;
-    }  else {
-        return false;
-    }
-};
-
 const conocenos = new Vue({
     el: '#conocenos',
+    mounted(){
+        this.maquinaescribir({
+            id: '#yuca',
+            texto: 'Hola! somos Yenerson Hernández y Yelainer Hernández, somos Desarrolladores y diseñadores de aplicaciones web. Nos gusta hacer todo tipo de aplicaciones aun que sean un reto <3. Hemos participado en múltiples proyectos de nuestro País. Dejando muchos clientes satisfechos con nuestro trabajo.'
+        })
+    },
     data: {
         skillsYener: ['Diseñador','Front-end','Creativo','Gamer'],
         skillsYela: ['Diseñador','Back-end','UI UX','Gamer'],
+    },
+    methods: {
+        maquinaescribir(obj) {
+            console.log("obj", obj);
+            let textoarr = Array.from(obj.texto);
+            let id = document.querySelector(obj.id);
+            let nuevotexto = '';
+            let i = 0;
+            let max = textoarr.length;
+            let textointerval = setInterval(() => {
+                i++;
+                nuevotexto += textoarr[i - 1];
+                id.innerText = nuevotexto;
+                if (i === max) {
+                    clearInterval(textointerval);
+                    textointerval = null;
+                    id.classList.remove('cursor-parpadeante');
+                }
+            }, 40)
+        }
     }
 })
 
@@ -165,7 +173,22 @@ const dominamos = new Vue({
         this.skills = this.yenrskills
     }
 })
-
+const validateEmail = (email) => {
+    const emailRegex = /^(([^<>()\[\]\\.,:\s@"]+(\.[^<>()\[\]\\.,:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(emailRegex.test(email)) {
+        return true;
+    }  else {
+        return false;
+    }
+};
+const validarTexto = (username) => {
+    const usernameRegex = /^[a-z0-9 _-]{3,}$/;
+    if(usernameRegex.test(username)) {
+        return true;
+    }  else {
+        return false;
+    }
+};
 const seleccion = new Vue({
     el: '#seleccion',
     data: {

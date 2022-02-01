@@ -91,7 +91,7 @@ const dominamos = new Vue({
                 tema: 'nivel-rojo',
                 icon: 'devicon-angularjs-plain',
                 titulo: 'Angular',
-                texto: 'Mi segunda libreria favorita ya que usa typescript <3. gran conocimiento de sus librerias como NgRx, Material, ',
+                texto: 'Mi segundo framework favorito para desarrollar aplicaciones a gran escala ya que usa typescript <3. gran conocimiento de sus librerias como NgRx, Material, ',
                 porcentaje: 72
             },
         ],

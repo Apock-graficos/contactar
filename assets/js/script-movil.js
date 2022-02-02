@@ -32,9 +32,8 @@ Vue.component('movil-aside', {
                     </li>
                 </ul>
             </nav>
-            <div class="flexcol alin-centro just-centro rell-med tex-claro">
+            <div class="flexcol alin-centro just-centro rell-med tex-claro marg-aba-peq">
                 <h3>{{ datetime.hour }}<span class="puntos-hora-animate">:</span>{{ datetime.minuts }} <span class="t-med">{{ datetime.horary }}</span></h3>
-                <span class="t-peq">Colombia</span>
             </div>
             <div class="celda-col-3 sep-med rell-hor-med alin-cen tex-claro botones-menu">
                 <a v-bind:target="iten.target ? '_black' : '_self'" v-bind:href="iten.url ? iten.url : '#'" v-for="(iten, index) of botones" :key="index" class="cart item-button alin-centro" v-bind:data-id="iten.id">
